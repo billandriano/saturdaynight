@@ -1,0 +1,112 @@
+/* Importing Premium Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600&display=swap');
+
+html, body {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    background: #0A192F; /* Elegant deep navy */
+    color: #F8F8F8; /* Luxury off-white text */
+    min-height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* Centering the form container */
+.container {
+    background: rgba(255, 255, 255, 0.05); /* Slightly transparent for depth */
+    padding: 50px;
+    border-radius: 15px;
+    width: 45%;
+    box-shadow: 0px 15px 40px rgba(255, 255, 255, 0.1);
+    text-align: center;
+    margin: auto;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease-in-out;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Only show one step at a time */
+.form-step {
+    display: none;
+}
+
+/* Show only the active step */
+.form-step.active {
+    display: block;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Styling for Titles */
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: #D4AF37; /* Luxury Gold */
+    margin-bottom: 10px;
+}
+
+/* Styling for Paragraphs */
+p {
+    font-size: 1.2rem;
+    color: #B0B0B0; /* Elegant muted gray */
+    margin-bottom: 20px;
+}
+
+/* Stylish Input Fields */
+input {
+    width: 85%;
+    padding: 12px;
+    margin: 15px 0;
+    border-radius: 30px;
+    border: 1px solid #D4AF37; /* Gold border */
+    font-size: 1.2rem;
+    outline: none;
+    text-align: center;
+    background: transparent;
+    color: #F8F8F8;
+    transition: border 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Elegant input hover effect */
+input:focus {
+    border: 1px solid #F8F8F8;
+    box-shadow: 0px 0px 10px rgba(212, 175, 55, 0.5);
+}
+
+/* Premium Button Style */
+button {
+    background: linear-gradient(90deg, #D4AF37, #B28F30);
+    color: #0A192F;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    margin-top: 15px;
+    font-weight: 600;
+    box-shadow: 0px 5px 20px rgba(212, 175, 55, 0.3);
+}
+
+/* Button hover effect */
+button:hover {
+    background: linear-gradient(90deg, #B28F30, #D4AF37);
+    transform: scale(1.05);
+    box-shadow: 0px 10px 30px rgba(212, 175, 55, 0.5);
+}
+
+/* SVG Line Decorations */
+.svg-line {
+    width: 80%;
+    margin: 30px auto;
+    opacity: 0.3;
+}

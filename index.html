@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special Surprise</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        <form id="stepForm">
+
+            <!-- Step 1: Welcome Message -->
+            <div class="form-step active">
+                <h1>Έχω ετοιμάσει κάτι ξεχωριστό💫</h1>
+                <p>Το Σάββατο είναι <b>η Ημέρα της Γυναίκας</b>, και φυσικά δε θα μπορούσα να μην ετοιμάσω <b>κάτι όμορφο για σένα γλυκό μου ζουζουνάκι</b>. 🌟🐞  
+                    Eίσαι έτοιμη να μάθεις τι είναι; ✨</p>
+                <svg width="100%" height="10" viewBox="0 0 500 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 5 C150 0, 350 10, 500 5" stroke="#D4AF37" stroke-width="3" stroke-linecap="round"/>
+                </svg>                
+                <button type="button" onclick="nextStep()">Επόμενο ➡️</button>
+            </div>
+
+            <!-- Step 2: Challenge Announcement -->
+            <div class="form-step">
+                <h1>Χμμ... Δεν είναι τόσο απλό! 😏</h1>
+                <p>Για να ανακαλύψεις <b>τι σε περιμένει</b>, πρέπει πρώτα να λύσεις </b>τρεις γρίφους</b>! 🧐  
+                    Οι γρίφοι αυτοί, σχετίζονται με το είδος κουζίνας που θα πάμε να φάμε🍴</p>
+                <svg width="100%" height="10" viewBox="0 0 500 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 5 C150 0, 350 10, 500 5" stroke="#D4AF37" stroke-width="3" stroke-linecap="round"/>
+                </svg>
+                
+                <button type="button" onclick="nextStep()">Ας ξεκινήσουμε! 🚀</button>
+            </div>
+
+             <!-- Step 3: Riddle 1 (Easy) -->
+             <div class="form-step">
+                <h1>🧩 1ος Γρίφος</h1>
+                <p>_"Με χέρια δε φτιάχνομαι, μα όλοι με πιάνουν.😜 
+                    Χωρίς εμένα, καμία παρέα δεν είναι ολοκληρωμένη.  
+                    Στρογγυλή ή τετράγωνη, πάντα ζεστή και μυρωδάτη.  
+                    Τι είμαι;"_</p>
+                <input type="text" id="answer1" placeholder="Your answer...">
+                <button type="button" onclick="checkAnswer(1)">Υποβολή ✅</button>
+            </div>
+
+            <!-- Step 4: Riddle 2 (Medium) -->
+            <div class="form-step">
+                <h1>🧩 2ος Γρίφος</h1>
+                <p>_"Γεννήθηκα στην Ιταλία,  
+                    μετριέμαι σε διαφορετικά μεγέθη,  
+                    με σάλτσες ταιριάζω υπέροχα,  
+                    μα αν με παραβράσεις, χάνω την αξία μου.  
+                    Τι είμαι;"_</p>
+                <input type="text" id="answer2" placeholder="Your answer...">
+                <button type="button" onclick="checkAnswer(2)">Υποβολή ✅</button>
+            </div>
+
+            <!-- Step 5: Riddle 3 (Difficult) -->
+            <div class="form-step">
+                <h1>🧩 3ος Γρίφος</h1>
+                <p>_"Γεννήθηκα από τυχαίο λάθος,  
+                    μα έγινα κλασικό γλυκό.  
+                    Έχω στρώσεις από όνειρο και άρωμα δυνατό,  
+                    με καφέ ξυπνάω τις αισθήσεις,  
+                    μα δεν πίνεται, τρώγεται γλυκά.  
+                    Τι είμαι;"_</p>
+                <input type="text" id="answer3" placeholder="Your answer...">
+                <button type="button" onclick="checkAnswer(3)">Υποβολή ✅</button>
+            </div>
+
+            <!-- Step 6: Congrats Message -->
+            <div class="form-step">
+                <h1>Μπγαβό Ιωάννα! 🤍❤️💙</h1>
+                <p>Α.. αυτό ήταν γαλλικά..</p>
+                <p>Αλλά εμείς όπως πολύ κατάλαβες θα πάμε να φάμε Ιταλικό. Αλλά τι θα έχει το μενού; 🧾🤔</p>
+                <button type="button" onclick="nextStep()">Ξείξε μου 🍝</button>
+            </div>
+
+            <!-- Step 6: Congrats Message -->
+            <div class="form-step" accept-charset="UTF-8">
+                <h1>Περίμενε..! ⛔</h1>
+                <p>Πρέπει να πεις τη μαγική λέξη πριν δεις το μενού.</p>
+                <input type="text" id="answer4" placeholder="Your answer...">
+                <button type="button" onclick="checkAnswer(4)">Υποβολή ✅</button>
+            </div>
+
+            <!-- Step 7: The Dinner Menu -->
+            <div class="form-step">
+                <h1>Και εγώ σ'αγαπάω 😏! Ας δούμε τώρα το μενού 👇</h1>
+                <h2>🥗 Ιnsalata</h2>
+                <p><b>De la casa</b> - σαλάτα, πράσινη σαλάτα, κρουτόν παρμεζάνας, κουκουνάρι, σταφίδες, σπιτική vinaigrette, παλαιωμένη παρμεζάνα</p>
+                <h2>🍴Αntipastι</h2>
+                <p><b>Μοσχαρίσια bresaola</b>, πίκλα βρούβας, αϊόλι κάπαρης, ξύσμα παρμεζάνας<br>ή<br>🧀 Mozzarella in carrozza, φρέσκια mozzarella τηγανητή σε κουρκούτι, σάλτσα από ψητές τομάτες</p>
+                <h2>🍝 Piatto principale</h2>
+                <p><b>Rigatoni a la vodka</b>, σάλτσα ψητής τομάτας, βότκα, κρέμα, παλαιωμένη παρμεζάνα<br>ή<br>Pollo francese, στήθος κοτόπουλο, σάλτσα βουτύρου, λεμόνι, μαϊντανός, πουρές πατάτας</p>
+                <h2>🍰 Dessert</h2>
+                <p><b>Τιραμισού</b>, συνταγή του 1913 από το Treviso της Ιταλίας, σπιτικό παντεσπάνι βουτηγμένο σε ζεστό espresso, zabaglione, mascarpone, σκόνη κακάο, τριμμένη σοκολάτα</p>
+                <button type="button" onclick="nextStep()">Θέλεις να μάθεις σε ποιο εστιατόριο θα πάμε;📍</button>
+            </div>
+
+            <!-- Step 8: Fake Location Reveal -->
+            <div class="form-step">
+                <h1>No No No</h1>
+                <p>Θα είναι έκπληξη.. Τα λέμε το Σάββατο στις 20:00 🎁😉</p>
+                <img src="assets/surprise.gif" alt="Funny Italian Meme">
+            </div>
+
+            <!-- More steps go here (same structure as before) -->
+
+        </form>
+    </div>
+
+</body>
+</html>
